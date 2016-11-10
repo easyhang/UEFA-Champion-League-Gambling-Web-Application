@@ -1,6 +1,6 @@
 # UEFA-Champion-League-Gambling-Web-Application
-Abstract
-Our project is called ‘Europe Championship Gambling Online’. We will post information about EUFA Season 2015-2016, including team match information and its odds (win:draw:lose) for the host and the visitor. User can Registrar into our website and participate in the gambling. All data created by users will be recorded. We use MySQL to implement the backend database, Django rest framework for connecting the frontend and backend, and HTML/CSS/Javascript for designing our front web pages.
+
+This project post information about EUFA Season 2015-2016, including team match information and its odds (win:draw:lose) for the host and the visitor. User can Registrar into our website and participate in the gambling. All data created by users will be recorded. We use MySQL to implement the backend database, Django rest framework for connecting the frontend and backend, and HTML/CSS/Javascript for designing our front web pages.
 
 Introduction
 Basic functions of our system
