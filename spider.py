@@ -21,35 +21,16 @@ try:
     i = 0
 
     for item in team_urls:
-        # replaceSt = re.compile('<strong>')
-        # replaceST = re.compile('</strong>')
-        # replaceBR = re.compile('<br />')
-        # text = re.sub(replaceSt,"\n", item)
-        # text1 = re.sub(replaceBR,"",text)
-        # text2 = re.sub(replaceST,"",text1)
         try:
             index_url = root_url + item
             requestindex = urllib2.Request(index_url)
             responsetext = urllib2.urlopen(requestindex)
             contentindex = responsetext.read().decode('utf-8')
-            # coachpattern = re.compile('<div class="fl coach">.*?>(.*?)</h2>', re.S)
             patternofteam = re.compile('<td class="playername l"><a href="(.*?)".*?</td>',re.S)
             teamnamepatt = re.compile('<h1 class="bigTitle"><a href.*?">(.*?)</a></h1>')
-            # coach = re.findall(coachpattern,contentindex)
             person_urls = re.findall(patternofteam,contentindex)
             teamname = re.findall(teamnamepatt,contentindex)
-            # teamInfo = '", "'.join(teamname+coach)
-            # sql = "INSERT INTO %s (%s) VALUES (%s)" % ('Gamble_team', 'teamname,coach', '"'+teamInfo+'"',)
-            # try:
-            # 	result = cur.execute(sql)
-            # 	insert_id = db.insert_id()
-            # 	db.commit()
-            # 	if result:
-            # 		print insert_id
-            # except MySQLdb.Error, e:
-            # 	print 'wrong'
-            # 	print e.args[0], e.args[1]
-
+            
         except urllib2.URLError, eee:
             if hasattr(eee, "code"):
                 print eee.code
@@ -90,12 +71,9 @@ try:
                     info = re.sub(replaceBR,"",info)
                     info = re.sub(replaceA,"", info)
                     info = re.sub(replaceLi,":",info)
-                    # print info
                     text.append(map(unicode,info.split(':')))
-                    # print text[0][0]
-                    # print len(text[0])
+                    
                     for x in range(len(text[0])):
-                        # print text[0][x]
                         if text[0][x] == 'Name':
                             playername = text[0][x+1]
                         if 'Position' in text[0][x]:
@@ -120,22 +98,10 @@ try:
                     r = g.team.objects.get(teamname = teamname[0])
                     b = g.player(team = r, name = playername,age=int(Age), position= playerPos, height = int(Height[:4]), country = Country, number = int(Number), score= int(Goal))
                     b.save()
-                    # personInfo = '", "'.join([playername,Age,playerPos,Height,Country,Number,Goal,Clubname])
-                    # sql = "INSERT INTO %s (%s) VALUES (%s)" % ('Gamble_player', 'name,age,position,height,Country,number,score,team_id', '"'+personInfo+'"',)
-                    # try:
-                    # 	result = cur.execute(sql)
-                    # 	insert_id = db.insert_id()
-                    # 	db.commit()
-                    # 	if result:
-                    # 		print insert_id
-                    # except MySQLdb.Error, e:
-                    # 	print 'wrong'
-                    # 	print e.args[0], e.args[1]
                     print playername, playerPos, Age, Clubname, Height, Number, Goal, Country
                 personinfo.append(text)
         i += 1
-    # print type(team_urls)
-    # print teamInfo
+
 except urllib2.URLError, e:
     if hasattr(e, "code"):
         print e.code
