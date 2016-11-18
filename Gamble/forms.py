@@ -6,7 +6,6 @@ import Gamble.models as mo
 
 class AddForm(forms.Form):
     a = forms.CharField()
-    #b = forms.IntegerField()
 
 
 class UserForm(ModelForm):
