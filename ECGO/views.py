@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponse
 import Gamble.models as g
-import Gamble.forms as gg
+import Gamble.forms as gf
 # Create your views here.
 
 
@@ -20,7 +20,7 @@ def game(request):
 def index(request):
     if request.method == 'POST':
 
-        form = gg.AddForm(request.POST)
+        form = gf.AddForm(request.POST)
 
         if form.is_valid():
             a = form.cleaned_data['a']
@@ -30,5 +30,5 @@ def index(request):
                     return HttpResponse(g.team.objects.all()[i])
 
     else:
-        form = gg.AddForm()
+        form = gf.AddForm()
     return render(request, 'index.html', {'form': form})
