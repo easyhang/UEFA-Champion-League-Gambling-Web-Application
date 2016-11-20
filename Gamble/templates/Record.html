@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superuser</title>
+</head>
+<body>
+    <h1>Gambling Record</h1>
+    {% for re in Record %}
+        <p>{{ re.match.hostteam }} V.S. {{ re.match.guestteam }}; {{ re.match.date }} User: {{ re.users.username }} Value: {{ re.fund }} Optional: {{ re.option }}</p>
+        <br />
+    {% endfor %}
+ <a href="/homepage/" class="button">Back</a></body></html>
+</body>
+</html>

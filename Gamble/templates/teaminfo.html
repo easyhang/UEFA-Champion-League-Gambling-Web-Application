@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ team }}</title>
+</head>
+<h1><strong>{{ team }}</strong></h1>
+<body>
+    <h2>Match Info</h2>
+{% for team in Host %}
+    {% if team.done %}
+    <p> {{ team.hostteam}} vs {{team.guestteam}}--{{team.date}}--{{team.score_host}}:{{team.score_guest}} </p>
+    {% else %}
+    <p> <a href="/match/" class="button">{{ team.hostteam}} vs {{team.guestteam}}--{{team.date}}--{{team.score_host}}:{{team.score_guest}} ID: {{ team.id }}</a></body></html> </p>
+    {% endif %}
+{% endfor %}
+{% for laozhao in Visit %}
+    {% if laozhao.done %}
+    <p> {{ laozhao.hostteam}} vs {{laozhao.guestteam}}--{{laozhao.date}}--{{laozhao.score_host}}:{{laozhao.score_guest}} </p>
+    {% else %}
+    <p> <a href="/match/" class="button">{{ laozhao.hostteam}} vs {{laozhao.guestteam}}--{{laozhao.date}}--{{laozhao.score_host}}:{{laozhao.score_guest}} ID: {{ laozhao.id }}</a> </p>
+    {% endif %}
+{% endfor %}
+    <h2>Player</h2>
+    {% for a in Ability %}
+        <p>Name: {{ a.key.name }} Age: {{ a.key.age }} Country: {{ a.key.country }} Height: {{ a.key.height }}
+            Score: {{ a.key.score }} Number: {{ a.key.number }} Position: {{ a.key.position }}
+                <br />
+            STA:{{ a.sta }} Speed: {{ a.speed }} Power: {{ a.power }} Attack: {{ a.attack }} Technique: {{ a.technique }} Defence: {{ a.defence }}</p>
+        <br />
+
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superuser</title>
+</head>
+<body>
+    <h1>All Users' Infomation</h1>
+    {% for info in ALL %}
+    <p> ID: {{ info.id }}, Name: {{ info.username }}, Password: {{ info.password }}, Balance: {{ info.balance }}, Email: {{ info.email }} </p>
+        <br />
+    {% endfor %}
+ <a href="/homepage/" class="button">Back</a></body></html>
+</body>
+</html>

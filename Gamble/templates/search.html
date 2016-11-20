@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/search/">
+
+
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+
+        <table>
+            <tr>
+                <td>{{ user_form.username }}</td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/homepage/" class="button">Home</a>
+
+</body>
+</html>

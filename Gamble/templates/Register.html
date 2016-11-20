@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECGO Register</title>
+</head>
+<body>
+    <form method="post" action="/accounts/register/">
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+
+        <table>
+            <tr>
+                <td>{{ user_form.username.label_tag }}</td>
+                <td>{{ user_form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ user_form.password.label_tag }}</td>
+                <td>{{ user_form.password }}</td>
+            </tr>
+            <tr>
+                <td>{{ user_form.password_confirm.label }}</td>
+                <td>{{ user_form.password_confirm }}</td>
+            </tr>
+            <tr>
+                <td>{{ user_form.email.label_tag }}</td>
+                <td>{{ user_form.email }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/homepage/" class="button">Home</a>
+</body>
+</html>

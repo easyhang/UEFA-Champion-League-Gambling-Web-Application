@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamble</title>
+</head>
+<body>
+    <h1>{{ Message.hostteam }} V.S. {{ Message.guestteam }} AT {{ Message.date }}</h1>
+    <p><strong>Odds: [WIN : {{ Message.odd_win }} EVEN : {{ Message.odd_even }} LOSE : {{ Message.odd_lose }}]</strong></p>
+    <br />
+    <h2>
+        Personal Information
+    </h2>
+    <p>
+        Name : {{ User.username }}<br />
+        Balance : {{ User.balance }}
+    </p>
+    <form method="post" action="/accounts/buy/">
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+        <table>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;wager&nbsp;{{ user_form.username }}</td>
+            </tr>
+            <tr>
+                <td>optional&nbsp;{{ user_form.password }}</td>
+            </tr>
+{#            <tr>#}
+{#                <td>{{ user_form.password.label_tag }}</td>#}
+{#                <td>{{ user_form.password }}</td>#}
+{#            </tr>#}
+        </table>
+        <input type="submit" value="Submit">
+        <a href="/buybuybuy/">Click me to add value</a>
+    </form>
+</body>
+</html>

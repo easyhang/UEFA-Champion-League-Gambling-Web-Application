@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superuser</title>
+</head>
+<body>
+<h1>Pending request</h1>
+{% for p in PEND %}
+    <p>{{ p.username }} request add money to {{ p.balance }}</p>
+{% endfor %}
+    <form method="post" action="/pending/">
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+        <table>
+            <tr>
+                agree?<td>{{ user_form.username }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+ <a href="/homepage/" class="button">Back</a></body></html>
+</body>
+</html>

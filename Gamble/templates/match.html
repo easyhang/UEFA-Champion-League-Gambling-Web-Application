@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>USER: {{ User.username }}</h1>
+    <p>Balance : {{ User.balance }}</p>
+    <h2>Match Info :</h2>
+    {% for team in Match %}
+        <p> MatchID: {{ team.id }} : {{ team.hostteam}} v.s. {{team.guestteam}}--{{team.date}}--{{team.score_host}}:{{team.score_guest}}<br />
+        Odds[ Win: {{ team.odd_win }} --- Even: {{ team.odd_even }} --- Lose: {{ team.odd_lose }} ]
+        </p>
+        <br /><br />
+    {% endfor %}
+    <form method="post" action="/match/">
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+        <table>
+            <tr>
+                Input MatchID<td>{{ user_form.username }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Buy now!">
+    </form>
+</body>
+</html>

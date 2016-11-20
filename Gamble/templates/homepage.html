@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:8000/homepage/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>welcome to ECGO</title>
+</head>
+<body background="../static/UEFA-Champions-League-Stadium-Wallpaper.jpg">
+    <br><h1><font face="Georgia, serif" color="#F5F5F5" style="
+    margin-top: 500px;
+">ECGO Gamble</font>
+<br>
+
+<br></h1>
+        {% if Login %}
+            {% if Superuser.superuser %}
+                <a href="/accounts/profile/" class="button"><font color =size="6">Username: {{ Username }}</font></a>
+                <a href="/match/" class="button"><font color =size="6">Start Gamble!</font></a>
+                <a href="/usersinfo/" class="button"><font color =size="6">Users_Info</font></a>
+                <a href="/record/" class="button"><font color =size="6">Trade_Record</font></a>
+                <a href="/pending/" class="button"><font color =size="6">Pending</font></a>
+                <a href="/accounts/logout/" class="button"><font color =size="6">Logout</font></a>
+            {% else %}
+                <a href="/accounts/profile/" class="button"><font color =size="6">Username: {{ Username }}</font></a>
+                <a href="/match/" class="button"><font color =size="6">Start Gamble!</font></a>
+                <a href="/accounts/logout/" class="button"><font color =size="6">Logout</font></a>
+                {% endif %}
+        {% else %}
+            <a href="/accounts/register/" class="button"><font size="6" color="FF0000"style="
+">Sign up</font></a>
+<br>
+
+<br>
+            <a href="/accounts/login/" class="button"><font size="6" color="FF0000"style="
+    margin-left: 0px;
+    margin-bottom: 0px;
+">login</font></a>
+        {% endif %}
+        
+
+
+
+<br>
+<br><br>
+    <form method="post" action="/homepage/">
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+
+        <table>
+            <tr>
+                <td>{{ user_form.username }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Search">
+    </form>
+<br><br><br><div>
+			<h2><font face="Georgia, serif" color="#F5F5F5">
+				Need more information for UEFA?
+			</font></h2>
+			<p><font face="Georgia, serif" color="#F5F5F5">
+
+				Welcome to UEFA official website!
+  </font>
+			</p>
+			<p>
+				<a class="btn" href="https://www.uefa.com/">View details »</a>
+			</p>
+		</div><font face="Georgia, serif" color="#F5F5F5">
+  </font>
+
+
+
+
+<div class="row">
+		<div class="col-md-6" style="
+    padding-top: 100px;
+">
+			<img alt="Bootstrap Image Preview" src="../static/northeastern-university-seal-150x150.jpg" style="
+    width: 100px;
+    height: 100px;
+">
+			<p><font color="FF9933" size="4">
+				ECGO,abbreviation for European Champion Gambling Online, </br> is a world-class gambling website,</br>created by four brave and determined master students from Northeastern University.
+			<font></font></font></p>
+</div></div>
+  <div><font face="Georgia, serif"  size="4">
+			<font  color="FFFF00">
+				<strong>Contact us</strong>
+			</font ></div>
+    <div><font color="FFFFFF"> Northeastern University<br>360 Hungtington Ave.<br>Boston,MA,02115<br> <abbr title="Phone">P:</abbr>617.373.2000</font></div>
+</body></html>

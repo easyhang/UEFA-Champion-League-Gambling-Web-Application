@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:8000/homepage/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>welcome to ECGO</title>
+</head>
+<body background="./welcome to ECGO_files/UEFA-Champions-League-Stadium-Wallpaper.jpg">
+    <br><h1><font face="Georgia, serif" color="#F5F5F5" style="
+    margin-top: 500px;
+">ECGO Gamble</font>
+<br>
+
+<br></h1>
+<style type="text/css">
+ #mydiv1{
+  position:relative;
+  left:1500px;
+  top:-100px;
+  }
+  </style>
+  <div id="mydiv1">
+        
+            <a href="http://127.0.0.1:8000/accounts/register/" class="button"><font size="6" color="FF0000" style="
+    margin-left: 0px;
+">Sign up</font></a>
+<br>
+
+<br>
+            
+        
+        
+
+
+
+<br>
+<br><br>
+    <form method="post" action="./welcome to ECGO_files/welcome to ECGO.html">
+        <input type="hidden" name="csrfmiddlewaretoken" value="LkbXZttFG0KyrOQOEBA7GPDkvACmZSqS">
+
+
+        <table>
+            <tbody><tr>
+                <td><input id="id_username" maxlength="200" name="username" type="text"></td>
+            </tr>
+        </tbody></table>
+        <input type="submit" value="Search">
+    </form>
+</div>
+<style type="text/css">
+ #mydiv2{
+  position:relative;
+  left:1620px;
+  top:-256px;
+  }
+  </style>
+<div id="mydiv2">
+<a href="http://127.0.0.1:8000/accounts/login/" class="button"><font size="6" color="FF0000" style="
+    margin-left: 0px;
+    margin-bottom: 0px;
+">Login</font></a>
+
+  </div>
+<br><br><br><style type="text/css">
+ #mydiv3{
+  position:relative;
+  left:0px;
+  top:-100px;
+  }
+  </style>
+<div id="mydiv3">
+			<h2><font face="Georgia, serif" color="#F5F5F5">
+				Need more information for UEFA?
+			</font></h2>
+<br>
+			<p><font face="Georgia, serif" color="#F5F5F5">
+
+				Welcome to UEFA official website!
+  </font>
+			</p>
+			<p>
+				<a class="btn" href="https://www.uefa.com/"><font color="#FFFFFF">View details</font>
+</a>
+&gt;<br><br>
+			</p>
+		
+
+			<img alt="Bootstrap Image Preview" src="./welcome to ECGO_files/northeastern-university-seal-150x150.jpg" style="
+    width: 100px;
+    height: 100px;
+">
+			<p><font color="#F5F5F5" size="4">
+				ECGO,abbreviation for European Champion Gambling Online, <br> is a world-class gambling website,<br>created by four brave and determined master students from Northeastern University.
+              </font></p>
+			<font>
+				<strong>Contact us</strong>
+			</font>Northeastern University<br>360 Hungtington Ave.<br>Boston,MA,02115<br> <abbr title="Phone">P:</abbr>617.373.2000
+</div></body></html>

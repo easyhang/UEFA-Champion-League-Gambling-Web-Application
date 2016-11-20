@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    {% if teamname.count >  0 %}
+
+    {% for t in teamname %}
+        <li><a href="/teams/get/{{ t.teamname }}">{{ t.teamname }}</a></li>
+    {% endfor %}
+
+    {% else %}
+
+    <li> None to show!</li>
+
+    {% endif %}
+
+</body>
+</html>

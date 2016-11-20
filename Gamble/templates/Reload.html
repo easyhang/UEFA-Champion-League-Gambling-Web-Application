@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reload</title>
+</head>
+<body>
+    <h2>UserName: {{ User.username }} </h2>
+    <form method="post" action="/buybuybuy/">
+        {% csrf_token %}
+{#        {{ user_form.as_p }}#}
+        <table>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add:{{ user_form.username }}</td>
+            </tr>
+            <tr>
+                <td>Password:{{ user_form.password }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
